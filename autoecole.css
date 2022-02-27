@@ -1,0 +1,186 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: monospace;
+}
+
+.row
+{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.main-nav li
+{
+    display: inline-block;
+}
+
+.main-nav li.active a
+{
+    border: 1px solid white;
+    
+}
+
+.main-nav li a:hover
+{
+    border: 1px solid white;
+}
+
+
+.main-nav li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+
+.hero
+{
+    position: absolute;
+    width: 1200px;
+    margin-left: 0px;
+    margin-top: 0px;
+    
+}
+
+
+.h1-hero
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+
+
+.main-head
+{
+    background-image:linear-gradient(rgba(103, 250, 35,0.5),rgba(247, 87, 87,0.7)),url(image/car.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.button
+{
+    margin-top: 30px;
+    margin-left: 440px;
+}
+
+.btn
+{
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.btn-one
+{
+    background-color: darkorange;
+    font-family: "Roboto", sans-serif;
+}
+
+.btn-two
+{
+    font-family: "Roboto", sans-serif;
+}
+
+
+.btn-two:hover
+{
+    background-color: darkorange;
+    transition: all 0.5s ease-in;
+    
+        
+}
+
+.logo img
+{
+    width: 200px;
+    height: auto;
+}
+
+
+/* acceuil élève */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1C2833;
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    width: 160px;
+    margin-right: 45px
+}
+.nav-gauche{
+    display: flex;
+    align-items: center;
+}
+
+.nav-droite{
+    display: flex;
+    align-items: center;
+}
+.users-mg{
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nav-droite ul li{
+    list-style: none;
+    display: inline-block;
+}
+.nav-droite ul li img{
+    width: 25px;
+    margin: 0 15px;
+}
+
+.search-box{
+    background: #efefef;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search-box button{
+    width: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 4px;
+    outline: none;
+    border: 0;
+}
