@@ -122,19 +122,23 @@ body
 
 
 /* acceuil élève */
-
+.E_B{
+    background-image: url(image/car.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1C2833;
+    background: #c4c0d6;
     padding: 5px 5%;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-.logo{
+.logo_E{
     width: 160px;
     margin-right: 45px
 }
@@ -155,6 +159,10 @@ nav{
 .nav-droite ul li{
     list-style: none;
     display: inline-block;
+    
+}
+.nav-droite ul li a{
+    text-decoration: none;
 }
 .nav-droite ul li img{
     width: 25px;
@@ -184,3 +192,46 @@ nav{
     outline: none;
     border: 0;
 }
+
+
+.container{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+}
+
+.menu-gauche{
+    flex-basis: 25%;
+    position: sticky;
+    
+    align-self: flex-start;
+}
+
+.menu-mid{
+    flex-basis: 70%;
+}
+
+.acc{
+    text-align: center;
+}
+
+
+.menu-droite{
+
+}
+
+.imp-lien{
+    margin-top: 80px;
+}
+.imp-lien a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #626262;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 25px;
+    
+}
+

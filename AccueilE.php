@@ -15,24 +15,25 @@
                 <link rel="stylesheet" type="text/css" href="autoecole.css">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
         </head>
-        <body>
+        <body class="E_B">
                 <nav>
-                        <?
-                                include_once "config.php";
-                                $sql= mysqli_query($bdd, "SELECT * FROM eleves WHERE Email = {$_SESSION['Email']} ");
+                        <?php
+                                include_once "php/config.php";
+                                $sql = mysqli_query($bdd, "SELECT * FROM eleve WHERE email = '".$_SESSION['Email']."'" );
                                 if(mysqli_num_rows($sql) > 0){
                                         $ligne = mysqli_fetch_assoc($sql);
                                 }
+                                
                         ?>
                         <div class="nav-gauche">
-                        <img src="image/logo4.png" class="logo">
+                        <img src="image/logo4.png" class="logo_E">
                         </div>
-                        <div class="nav-milieu">
+                        <!-- <div class="nav-milieu"> 
                                 <div class="search-box">
                                         <input type="text" placeholder="Faites votre recherche...">
                                         <button><i class="fas fa-search"></i></button>
                                 </div>     
-                        </div>
+                        </div> -->
                         <div class="nav-droite">
                                 <ul>
                                         <li><img src="image/<?php echo $ligne['img'] ?>" class="users-mg"></li>
@@ -44,9 +45,25 @@
                 </nav>
 
 
-                <div class="">
-                       
+                <div class="container">
+
+                       <div class="menu-gauche">
+                                <div class="imp-lien">
+                                        <a href="#">Entrainement</a>
+                                        <a href="#">Cours de code</a>
+                                </div>
+                                        
+                                   
+                       </div>
+
+                        <div class="menu-mid">
+                                <h1 class="acc">Bienvenue sur AutoCode</h1>
+
+                        </div>
                         
+                        <div class="menu-droite">
+                                <h1>Planning</h1>
+                        </div>
 
                 </div>
         </body>

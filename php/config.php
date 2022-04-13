@@ -3,4 +3,3 @@
    if(!$bdd){
        echo "Database connected" . mysqli_connect_error();
    }
-?>

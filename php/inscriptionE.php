@@ -15,7 +15,7 @@
 
         if(!empty($nom) && !empty($pre) && !empty($date) && !empty($mail) && !empty($tel) && !empty($ad) && !empty($vil) && !empty($cod) && !empty($mdp)){
 
-            $sql = mysqli_query($bdd, "SELECT * FROM eleves WHERE Email='$mail'");
+            $sql = mysqli_query($bdd, "SELECT * FROM eleve WHERE email='$mail'");
 
             if(mysqli_num_rows($sql) > 0){
                 echo "cette email existe dans la base";
@@ -34,11 +34,14 @@
                         $new_img_name = $time.$img_name;
                         
                         if(move_uploaded_file($tmp_name, "../image/".$new_img_name)){
-                            $sql1 = mysqli_query($bdd, "INSERT INTO eleves (nomE, prenomE, dateN, Email, Tel, adresse, ville, codeP, mdp, img) 
-                                                    VALUES ('{$nom}', '{$pre}', '{$date}', '{$mail}', '{$tel}', '{$ad}', '{$vil}', '{$cod}', '{$mdp}', '{$new_img_name}')");
-
-                            echo "inscription réussie, connectez-vous";
-                            header ("refresh:3; url=../connexionE.php");
+                            $req = "INSERT INTO eleve (nom, prenom, datenaiss, email, phone, adresse, ville, codeP, mdp, img) 
+                            VALUES ('$nom', '$pre', '$date', '$mail', '$tel', '$ad', '$vil', '$cod', '$mdp', '$new_img_name')";
+                            echo $req;
+                            $sql1 = mysqli_query($bdd, $req);
+                            // echo mysqli_error($bdd);
+                                                    
+                             echo "inscription réussie, connectez-vous";
+                             header ("refresh:3; url=../connexionE.php");
                         }else{
                             echo "il y a une erreur";
                         }
